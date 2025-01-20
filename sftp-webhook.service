@@ -1,0 +1,11 @@
+[Unit]
+Description=SFTP Webhook Trigger
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/sftp-webhook.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
